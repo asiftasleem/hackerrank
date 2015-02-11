@@ -22,7 +22,7 @@ public class Solution {
 	static String testcase2 = "ninety nine thousand nine hundred ninety nine";
 	public static void main(String args[]) {
 		Solution testInstance = new Solution();
-		int result = testInstance.inNumerals(testcase2);
+		int result = testInstance.inNumerals(testcase1);
 		System.out.println("Result : " + result);
 		
 	}

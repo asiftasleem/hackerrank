@@ -7,6 +7,8 @@ import java.util.TreeSet;
 public class Solution {
 	
 	private static SortedSet<String> set = new TreeSet<String>();	
+	
+	private static int totalCalls = 0;
 
 	public static void main(String[] args) {
 		
@@ -20,6 +22,11 @@ public class Solution {
 		
 		permute(value);
 		
+		for (String str : set)
+			System.out.println(str);
+		
+		System.out.println(totalCalls);
+		
 
 		
 	}
@@ -29,6 +36,7 @@ public class Solution {
 	}
 
 	private static void permute(String prefix, String str) {
+		totalCalls++;
 	    int n = str.length();
 	    if (n == 0) 
 	    	set.add(prefix);

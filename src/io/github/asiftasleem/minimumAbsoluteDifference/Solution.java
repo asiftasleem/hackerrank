@@ -1,12 +1,9 @@
 package io.github.asiftasleem.minimumAbsoluteDifference;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.TreeSet;
 
 public class Solution {
 
-    public static Integer getMinimalCommon(int[] a, int[] b){
+    public static Integer getMinimalAbsoluteDifference(int[] a, int[] b){
 
     	int i=0, j=0, k=0;
     	int diff = Integer.MAX_VALUE,  cdiff;
@@ -15,6 +12,7 @@ public class Solution {
     		while (a[i] < b[j]) 
     		{
     			cdiff = b[j] - a[i];
+    			cdiff = Math.abs(cdiff);
     			i++;
     			if (cdiff < diff) diff = cdiff;
     			if (i == a.length) return diff;
@@ -22,6 +20,7 @@ public class Solution {
     		while (b[j] < a[i])
     		{
     			cdiff = b[j] - a[i];
+    			cdiff = Math.abs(cdiff);
     			j++;
     			if (cdiff < diff) diff = cdiff;
     			if (j == b.length) return diff;
@@ -41,8 +40,8 @@ public class Solution {
 //        }
 //        in.close();
         int[] ar = {3,5,7,8,11,25};
-        int[] ar1 = {10, 11, 5, 30, 35};
-        int x = getMinimalCommon(ar, ar1);
+        int[] ar1 = {10, 12, 15, 30, 35};
+        int x = getMinimalAbsoluteDifference(ar, ar1);
         System.out.print(x + " ");
     }
 }
