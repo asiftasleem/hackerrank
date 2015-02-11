@@ -1,4 +1,4 @@
-package io.github.asiftasleem.delta;
+package io.github.asiftasleem.permutations;
 
 import java.util.Scanner;
 import java.util.SortedSet;
